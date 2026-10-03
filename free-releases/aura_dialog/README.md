@@ -8,21 +8,15 @@ Standalone NPC dialog system for FiveM. Give any ped a clean conversation panel 
 
 No framework required. Works with any server.
 
-{% hint style="success" %}
-**Standalone:** no ESX / QBCore / QBOX setup needed. If you can `ensure` a resource, you can run this.
-{% endhint %}
+### Contents
 
-### What you get
-
-* Exports-driven — register dialogs from any client script
-* Typewriter text with per-dialog speed
-* Mugshot portrait via `MugShotBase64`
-* Cinematic scripted camera that stays put when you switch pages for the same NPC
-* Branching trees via `menu`, actions via `event` / `serverEvent` / `onSelect`
-* 3D tilt panel with adjustable perspective and shadow
-* Bundled example NPC to test it in seconds
-
-Start here: [Installation](./installation.md), then [Usage](./usage/README.md).
+* [Installation](./installation.md) — get the resource running
+* [Configuration](./configuration.md) — tune the dialog UI and the example NPC
+* [Showcase](./showcase.md) — video and screenshots
+* [Usage](./usage/README.md) — register dialogs, branch pages and run events
+* [Exports](./exports/README.md) — full client API reference
+* [FAQ](./faq.md) — frequently asked questions
+* [Common Issues](./common-issues.md) — fixes for common setup mistakes
 
 ### Store
 
