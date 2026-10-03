@@ -16,17 +16,17 @@ No framework required. Works with any server.
 
 * Exports-driven — register dialogs from any client script
 * Typewriter text with per-dialog speed
-* Mugshot portrait via `MugShotBase64` (cached per entity)
+* Mugshot portrait via `MugShotBase64`
 * Cinematic scripted camera that stays put when you switch pages for the same NPC
 * Branching trees via `menu`, actions via `event` / `serverEvent` / `onSelect`
 * 3D tilt panel with adjustable perspective and shadow
-* Bundled Trevor Philips example (10 dialogs) to test in 30 seconds
+* Bundled example NPC to test it in seconds
 
 Start here: [Installation](./installation.md), then [Usage](./usage/README.md).
 
 ### Store
 
-{% embed url="https://store.auradevelopment.xyz/" %}
+{% embed url="https://store.auradevelopment.xyz/products/7646274" %}
 
 ### Support
 

@@ -32,4 +32,4 @@ No. Standalone — only `ox_lib` + `MugShotBase64` are required.
 
 ### Where is the UI?
 
-Pre-built in `web/build/index.html` (`ui_page`). No extra step needed.
+The UI is served from `web/build/index.html`.

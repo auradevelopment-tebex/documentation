@@ -9,9 +9,9 @@ How to properly install aura_dialog. Takes about 2 minutes, no framework steps.
 {% stepper %}
 {% step %}
 
-### Download resource
+### Get resource
 
-Download `aura_dialog` from your [store](https://store.auradevelopment.xyz/) release.
+Get `aura_dialog` from our [store](https://store.auradevelopment.xyz/products/7646274), then download it from your [CFX portal](https://portal.cfx.re/assets/granted-assets).
 {% endstep %}
 
 {% step %}
@@ -31,7 +31,7 @@ resources/[standalone]/aura_dialog
 
 Make sure these are installed and start **before** `aura_dialog`:
 
-* [**ox_lib**](https://github.com/overextended/ox_lib/releases/latest) — required (`lib.points`, init)
+* [**ox_lib**](https://github.com/overextended/ox_lib/releases/latest) — required
 * **MugShotBase64** — required for the NPC portrait (`exports:GetMugShotBase64`). Dialog still opens if it fails, just without a mugshot.
 {% endstep %}
 
@@ -48,7 +48,7 @@ ensure aura_dialog
 ```
 
 {% hint style="info" %}
-Without the proper startup order the Trevor example point (`lib.points.new`) will error on start.
+Without the proper startup order the example NPC will error on start.
 {% endhint %}
 {% endstep %}
 
@@ -63,5 +63,3 @@ Walk within `3.0m`, you will see `[E] Talk to Trevor` — press **E** to open `t
 Then continue to [Configuration](./configuration.md).
 {% endstep %}
 {% endstepper %}
-
-The release ships pre-built — `web/build/index.html` is already set as `ui_page`. No extra build step needed.

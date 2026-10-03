@@ -13,4 +13,4 @@ Opening a dialog sets NUI focus (`SetNuiFocus(true, true)`) and creates a script
 * Re-opening for the **same entity** (menu navigation) keeps the camera where it is
 * Closing releases focus and blends back with a race-safe destroy
 
-Mugshots are taken once per entity per session via `MugShotBase64` and reused. Pass `false` as second arg to `ShowDialog(id, false)` to skip the mugshot.
+Mugshots come from `MugShotBase64`. Pass `false` as second arg to `ShowDialog(id, false)` to skip the mugshot.

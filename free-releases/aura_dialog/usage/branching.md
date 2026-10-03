@@ -4,28 +4,24 @@ description: Branching dialogs with menu in aura_dialog.
 
 # Branching
 
-Set `menu` on an option to switch to another registered dialog without closing the UI. Camera stays put if `entity` is the same — this is how the Trevor tree works.
+Set `menu` on an option to switch to another registered dialog without closing the UI. Camera stays put if `entity` is the same — this is how multi-page conversations work.
 
 ```lua
-{ label = 'Who are you, exactly?', menu = 'trevor_backstory' }
+{ label = 'Tell me about yourself', menu = 'npc_about' }
 ```
 
-Full flow from the bundled example:
-
-* `trevor_main` → `trevor_backstory` / `trevor_early_life` / `trevor_michael` / `trevor_business` / `trevor_goodbye`
-* `trevor_backstory` → `trevor_early_life` / `trevor_blaine` / back to `trevor_main`
-* `trevor_business` → `trevor_oneils` / `trevor_crew` / back
+Example with two pages:
 
 ```lua
 exports['aura_dialog']:RegisterDialog({
-    id = 'trevor_main',
-    title = 'Trevor Philips',
-    subtitle = 'Sandy Shores, Blaine County',
-    text = "Oh great, another person walkin' up to me...",
-    entity = trevorPed,
+    id = 'npc_main',
+    title = 'John Doe',
+    subtitle = 'Paleto Bay',
+    text = 'Hello there. What can I do for you?',
+    entity = entity,
     options = {
-        { label = 'Who are you, exactly?', menu = 'trevor_backstory' },
-        { label = 'Never mind. Goodbye.', menu = 'trevor_goodbye' },
+        { label = 'Tell me about yourself', menu = 'npc_about' },
+        { label = 'Goodbye', onSelect = function() print('bye') end },
     }
 })
 ```

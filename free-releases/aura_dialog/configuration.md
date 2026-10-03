@@ -15,7 +15,7 @@ Config.Ui = {
     Shadow = true,        -- panel drop shadow
 }
 
-Config.TrevorExample = true  -- demo Trevor NPC + 10 dialogs
+Config.TrevorExample = true  -- bundled example NPC
 Config.VersionCheck = true   -- check versions.json on start, console notice if update
 ```
 
@@ -37,11 +37,11 @@ Changes apply on the next `ShowDialog` — the UI receives `configure(Config.Ui)
 Config.TrevorExample = true
 ```
 
-* `true` — spawns `player_two` (Trevor) at `vector4(346.31, -1696.43, 47.3, 329.85)`, invincible, `WORLD_HUMAN_STAND_IMPATIENT`, `lib.points.new` 10.0m range, `[E]` prompt at 3.0m, registers 10 dialogs (`trevor_main`, `trevor_backstory`, `trevor_early_life`, `trevor_blaine`, `trevor_michael`, `trevor_michael_found`, `trevor_business`, `trevor_oneils`, `trevor_crew`, `trevor_goodbye`).
+* `true` — spawns an example NPC with a few example dialogs so you can try it out immediately.
 * `false` — disables spawn + interaction entirely. Use this in production once you use your own dialogs.
 
 {% hint style="warning" %}
-Disable `TrevorExample` on live servers. It is only a showcase of [Branching](./usage/branching.md).
+Disable `TrevorExample` on live servers once you use your own dialogs.
 {% endhint %}
 
 ### Version check

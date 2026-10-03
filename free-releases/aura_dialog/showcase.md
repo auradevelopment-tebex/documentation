@@ -4,7 +4,7 @@ description: Showcase video and screenshots for aura_dialog.
 
 # Showcase
 
-In-game look with 3D tilt on/off and the Trevor example conversation.
+In-game look with 3D tilt on/off and an example conversation.
 
 ### Video
 

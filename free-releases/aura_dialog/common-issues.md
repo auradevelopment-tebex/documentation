@@ -28,4 +28,4 @@ Fix: call `exports['aura_dialog']:CloseDialog()` once (e.g. on resource stop / p
 
 You used `menu` pointing to an unregistered id, or forgot `args`.
 
-Fix: register every `menu` target first, check spelling (`trevor_main` vs `trevor_Main` matters).
+Fix: register every `menu` target first, check spelling (`npc_main` vs `npc_Main` matters).

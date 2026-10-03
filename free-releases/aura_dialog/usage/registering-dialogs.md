@@ -4,7 +4,7 @@ description: Registering dialogs with aura_dialog.
 
 # Registering Dialogs
 
-Register after the NPC entity exists. The Trevor example does this right after `CreatePed`.
+Register after the NPC entity exists — for example right after `CreatePed`.
 
 ```lua
 exports['aura_dialog']:RegisterDialog({
