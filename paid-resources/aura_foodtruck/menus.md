@@ -24,8 +24,6 @@ Every truck has the same four interaction points:
 | Storage | stash | 100 | 200000 g | Yes | 1.25 m |
 | Register | billing | — | — | Yes | 1.30 m |
 
-\* Bean Machine's cooking station is open to everyone (`jobRestricted = false`); all other trucks restrict it to employees.
-
 Sale prices below are the effective price after `sales.prices` overrides / `sales.defaultPrice` fallback are applied at runtime.
 
 <details>
