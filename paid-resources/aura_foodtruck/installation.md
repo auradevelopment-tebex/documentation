@@ -25,7 +25,7 @@ resources/[standalone]/aura_foodtruck
 Make sure these are installed and start **before** `aura_foodtruck`:
 
 * [**ox_lib**](https://github.com/overextended/ox_lib/releases/latest) — required (v3.30.6 or higher)
-* [**oxmysql**](https://github.com/overextended/oxmysql/releases/latest) — required (profiles, upgrades, logs, bank)
+* [**oxmysql**](https://github.com/overextended/oxmysql/releases/latest) — required
 
 No external bridge resource is required. Framework, inventory, target, notify, progress and banking integrations live in the resource's own `bridge/` folder and resolve the running providers automatically.
 {% endstep %}
@@ -50,7 +50,7 @@ Without the proper startup order the bridge modules fail to resolve and every in
 
 ### Framework setup
 
-Add the jobs, items and inventory images for your setup — [Framework Setup](./framework-setup.md) has the ready-to-paste blocks for QBCore, ESX and ox_inventory.
+Add the jobs, items and inventory images for your setup — [Framework Setup](./framework-setup.md) has the ready-to-paste blocks for QBCore and ESX.
 {% endstep %}
 
 {% step %}

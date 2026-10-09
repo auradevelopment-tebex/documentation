@@ -4,11 +4,11 @@ description: Cooking food in aura_foodtruck - recipes, craft timers and the queu
 
 # Cooking
 
-Open **Cook Food** on the truck (employees only, except Bean Machine). Pick a recipe to see its ingredients — availability is checked instantly when the menu opens, so the Craft button never lies about what you can make.
+Open **Cook Food** on the truck (employees only). Pick a recipe to see its ingredients.
 
 ### How a craft works
 
-1. Select a recipe — missing ingredients are listed on the spot.
+1. Select a recipe.
 2. Press **Craft Item** — ingredients are removed from your inventory **first**, then the timer runs with animation, freeze and smoke.
 3. When the timer finishes the finished item lands in your inventory and the craft is logged.
 

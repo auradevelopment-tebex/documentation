@@ -127,7 +127,7 @@ Each level costs `baseCost * (currentLevel + 1)`.
 
 ### Food trucks (`foodTrucks`)
 
-One entry per vehicle model: owning `job`, UI `theme`, `shopName`, `targets` (tray/storage inventories with slots and weight in grams; `jobRestricted` gates employees-only points — the tray stays public so customers can grab food) and `recipes` grouped into menu categories. Each truck gets its OWN tray/storage stashes (named per model + plate), so stock never leaks between trucks.
+One entry per vehicle model: owning `job`, UI `theme`, `shopName`, `targets` (tray/storage inventories with slots and weight in grams; `jobRestricted` gates employees-only points — the tray stays public so customers can grab food) and `recipes` grouped into menu categories.
 
 ### Server tuning (`configs/server/main.lua`)
 
