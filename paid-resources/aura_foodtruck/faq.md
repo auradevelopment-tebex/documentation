@@ -18,7 +18,7 @@ Working as intended — grades match **exactly**. Add `5` to `ownerGrades` (or e
 
 ### Tray vs storage — what's the difference?
 
-The tray is public (customers grab their food), storage is employees-only. Both are per-truck stashes (model + plate), so stock never leaks between trucks.
+The tray is public (customers grab their food), storage is employees-only.
 
 ### Do I need aura_bridge?
 

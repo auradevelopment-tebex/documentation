@@ -11,6 +11,6 @@ Everything runs through the four target points on the truck, gated by job where 
 3. **Sell** (`/sellfoodtruck`) — walk-up NPC customers ([NPC Sales](./npc-sales.md))
 4. **Tablet** (item or `/foodtrucktablet`) — dashboard, bank, upgrades, logs ([Tablet](./tablet.md))
 
-The **tray** is public so customers can grab their food; **storage** is employees-only. Each truck gets its OWN tray/storage stashes (named per model + plate), so stock never leaks between trucks.
+The **tray** is public so customers can grab their food; **storage** is employees-only.
 
 Next: [Cooking](./cooking.md)
