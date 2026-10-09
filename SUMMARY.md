@@ -4,7 +4,19 @@
 
 * [aura\_loadingscreen](README.md)
 * [aura\_dailyrewards](paid-resources/aura_dailyrewards.md)
-* [aura\_foodtruck](paid-resources/aura_foodtruck.md)
+* [aura\_foodtruck](paid-resources/aura_foodtruck/README.md)
+  * [Installation](paid-resources/aura_foodtruck/installation.md)
+  * [Framework Setup](paid-resources/aura_foodtruck/framework-setup.md)
+  * [Configuration](paid-resources/aura_foodtruck/configuration.md)
+  * [Menus](paid-resources/aura_foodtruck/menus.md)
+  * [Showcase](paid-resources/aura_foodtruck/showcase.md)
+  * [Usage](paid-resources/aura_foodtruck/usage/README.md)
+    * [Cooking](paid-resources/aura_foodtruck/usage/cooking.md)
+    * [Register](paid-resources/aura_foodtruck/usage/register.md)
+    * [NPC Sales](paid-resources/aura_foodtruck/usage/npc-sales.md)
+    * [Tablet](paid-resources/aura_foodtruck/usage/tablet.md)
+  * [FAQ](paid-resources/aura_foodtruck/faq.md)
+  * [Common Issues](paid-resources/aura_foodtruck/common-issues.md)
 
 ## Free Releases
 
