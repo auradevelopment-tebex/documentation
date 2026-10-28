@@ -7,7 +7,7 @@ description: Staff and admin commands in aura_pawnshop.
 | Command | Who | What it does |
 | --- | --- | --- |
 | `/pawnsell` | Employees with `view_market`, in the shop | Opens or closes the door to [walk-in customers](./usage/walk-ins.md) |
-| `/pawnitems <item>` | Admins (`group.admin`) | Prints what the shop finds for an item: inventory, whether it exists, label and image path |
+| `/pawnitems <item>` | Admins (`group.admin`) | Prints what the resource finds for an item: inventory, whether it exists, label and image path |
 | `/pawndemo` | Admins (`group.admin`) | Toggles fake demo data in your own boss menu. Nothing is saved |
 | `/pawn_warehouse_set <level>` | Admins (`group.admin`), only with `DevMode = true` | Sets the warehouse level (`0` to `5`) without paying, for testing |
 

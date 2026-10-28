@@ -4,11 +4,11 @@ description: Framework setup for aura_pawnshop - the pawn job, the 66 items and 
 
 # Framework Setup
 
-The shop needs two things from your server: the `pawn` **job** and the 66 **items** it buys and sells. Do both, then restart the server.
+The resource needs two things your server must provide, because it can't create them itself: the `pawn` **job** and the 66 **items** the shop buys and sells. Add both, then restart the whole server, so your framework and inventory have them loaded before `aura_pawnshop` starts.
 
 ### 1. The job
 
-The shop runs on one job, `pawn`, with 5 grades:
+The resource uses one job, `pawn`, with 5 grades:
 
 | Grade | Name | Can do |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ Run this once in your database (HeidiSQL, phpMyAdmin or txAdmin), then restart t
 -- whitelisted = 1 keeps the job out of the job centre: staff must be hired in the shop
 INSERT INTO jobs (name, label, whitelisted) VALUES ('pawn', 'Pawn Shop', 1);
 
--- the highest grade must be named 'boss': that is how ESX and the shop recognise the owner
+-- the highest grade must be named 'boss': that is how ESX and the resource recognise the owner
 INSERT INTO job_grades (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
 ('pawn', 0, 'pawn_clerk', 'Pawn Clerk', 50, '{}', '{}'),
 ('pawn', 1, 'appraiser', 'Appraiser', 100, '{}', '{}'),
@@ -74,7 +74,7 @@ INSERT INTO job_grades (job_name, grade, name, label, salary, skin_male, skin_fe
 ('pawn', 3, 'store_manager', 'Store Manager', 200, '{}', '{}'),
 ('pawn', 4, 'boss', 'Owner', 300, '{}', '{}');
 
--- the shop's bank account (esx_addonaccount / esx_society); the shop also creates it if it is missing
+-- the shop's bank account (esx_addonaccount / esx_society); the resource also creates it if it is missing
 INSERT IGNORE INTO addon_account (name, label, shared) VALUES ('society_pawn', 'Pawn Shop', 1);
 INSERT INTO addon_account_data (account_name, money, owner)
 SELECT 'society_pawn', 0, NULL FROM DUAL
@@ -723,7 +723,7 @@ The ESX built-in inventory has no stashes, so shop storage, counter sales and th
 
 ### 3. Item images
 
-The shop's own menus find item images automatically: first in your inventory's image folder, then in the `_images/` folder that ships with the resource. You don't need to do anything for the shop menus.
+The resource finds item images for its own menus automatically: first in your inventory's image folder, then in the `_images/` folder that ships with it. You don't need to do anything for the shop menus.
 
 Your **inventory** only shows images it has itself. Copy every `.png` from `aura_pawnshop/_images/` into your inventory's image folder:
 

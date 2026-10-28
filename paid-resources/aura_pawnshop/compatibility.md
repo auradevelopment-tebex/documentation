@@ -4,7 +4,7 @@ description: Frameworks, inventories, banking and other resources aura_pawnshop 
 
 # Compatibility
 
-The shop detects the resources below by itself when it starts. You don't select them anywhere: start the one you use **before** `aura_pawnshop`. No external bridge resource is needed; all integrations live in the resource's own `bridge/` folder.
+The resource detects the resources below by itself when it starts. You don't select them anywhere: start the one you use **before** `aura_pawnshop`. No external bridge resource is needed; all integrations live in the resource's own `bridge/` folder.
 
 ### Framework
 
@@ -16,19 +16,19 @@ The shop detects the resources below by itself when it starts. You don't select 
 
 ### Inventory
 
-The shop needs an inventory that can create stashes and put items into them from the server: that is how storage, counter sales and walk-in sales work.
+The resource needs an inventory that can create stashes and put items into them from the server: that is how storage, counter sales and walk-in sales work.
 
 | Resource | Supported | Notes |
 | --- | --- | --- |
 | `ox_inventory` | Yes | **Recommended** |
-| `qb-inventory` | Yes | Version **2.x** only. With 1.x the shop prints an error and disables storage, counter sales and walk-in sales |
+| `qb-inventory` | Yes | Version **2.x** only. With 1.x the resource prints an error and disables storage, counter sales and walk-in sales |
 | `qs-inventory` | Yes | |
 | `origen_inventory` | Yes | |
 | `tgiann-inventory` | Yes | |
 | `jpr-inventory` | Yes | |
 | `core_inventory` | Yes | |
-| `ps-inventory` | Partly | Storage opens, but the shop can't put items into it: players can't sell at the counter and staff can't buy from walk-in sellers |
-| `codem-inventory` | Partly | Same as `ps-inventory`. Its stashes also skip the shop's own range and rank checks |
+| `ps-inventory` | Partly | Storage opens, but the resource can't put items into it: players can't sell at the counter and staff can't buy from walk-in sellers |
+| `codem-inventory` | Partly | Same as `ps-inventory`. Its stashes also skip the resource's own range and rank checks |
 | ESX built-in | No | No stashes. Use `ox_inventory` with ESX |
 
 ### Target
@@ -55,11 +55,11 @@ The shop's money lives in a society/business account named by `Society.account` 
 | `tgiann-bank` | Yes |
 | `qb-banking` | Yes |
 | `esx_addonaccount` (ESX society) | Yes, account `society_pawn` |
-| None of the above | The shop keeps its money in its own database table (`StandaloneBank`) |
+| None of the above | The resource keeps the shop's money in its own database table (`StandaloneBank`) |
 
 ### Other resources
 
-All optional. When none is running, the shop uses ox_lib or GTA defaults.
+All optional. When none is running, the resource uses ox_lib or GTA defaults.
 
 | System | Detected resources |
 | --- | --- |

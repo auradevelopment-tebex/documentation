@@ -19,9 +19,9 @@ description: Documentation for aura_pawnshop - a player-owned pawnshop business 
 
 ### Before you buy
 
-You need these on your server. [Installation](./installation.md) explains each one.
+You need these on your server. [Installation](./installation.md) lists them with download links.
 
-* **The rStudio Pawn Shop MLO.** The resource is built around this interior and every location in the config matches it.
+* **[The rStudio Pawn Shop MLO](https://rstudiomaps.tebex.io/package/6793070).** The resource is built around this interior and every location in the config matches it.
 * **[ox_lib](https://github.com/overextended/ox_lib/releases/latest)** and **[oxmysql](https://github.com/overextended/oxmysql/releases/latest)**.
 * **A framework:** `qbx_core`, `qb-core` or `es_extended`.
 * **An inventory with stash support:** `ox_inventory` is recommended. See [Compatibility](./compatibility.md) for the others and their limits.

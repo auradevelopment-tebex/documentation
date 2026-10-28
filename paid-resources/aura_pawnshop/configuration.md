@@ -14,7 +14,7 @@ There are two config files. Both are fully commented, so you can also read the e
 After any change, restart the resource (`ensure aura_pawnshop` or a server restart).
 
 {% hint style="warning" %}
-Some settings are only **starting values**. The first time the shop runs it saves them, and from then on the owner changes them in game: permissions, the buy list, shop mode, policies (commission, delivery fee, listing limit) and upgrade levels. Editing the config later does not overwrite what is saved. See [Resetting saved settings](#resetting-saved-settings).
+Some settings are only **starting values**. The first time the resource starts it saves them in the database, and from then on the owner changes them in game: permissions, the buy list, shop mode, policies (commission, delivery fee, listing limit) and upgrade levels. Editing the config later does not overwrite what is saved. See [Resetting saved settings](#resetting-saved-settings).
 {% endhint %}
 
 ## Shared config (`configs/shared/main.lua`)
@@ -42,7 +42,7 @@ local MAX_GRADE <const> = 4
 | `Debug` | `false` | Prints extra `[DEBUG]` lines in the F8 and server console. Turn it on when something doesn't work, off on a live server. |
 | `DevMode` | `true` | Enables the admin test command `pawn_warehouse_set`. Set it to `false` on a live server. |
 | `Sounds` | GTA sounds | Sound played for select, back, purchase, success, error and van arrival. Set one to `false` to mute it. |
-| `InventoryImages.baseUrl` | `'nui://ox_inventory/web/images/'` | Backup image folder, only used when the shop can't find an item's image in your inventory or in `_images/`. |
+| `InventoryImages.baseUrl` | `'nui://ox_inventory/web/images/'` | Backup image folder, only used when the resource can't find an item's image in your inventory or in `_images/`. |
 
 ### Map blip (`Blip`)
 
@@ -152,7 +152,7 @@ The other options (`valueDrift*`, `ask*`, `buyBudget*`, `*ChancePct`) tune the h
 | `Society.maxCommissionPct` | `50` | Highest commission an owner can set. |
 | `Society.maxDeliveryFee` | `5000` | Highest delivery fee an owner can set. |
 | `Society.requireDuty` | `false` | `true` = staff must be on duty to use the shop. |
-| `StandaloneBank.enabled` | `true` | Backup account in the shop's own table, used when your banking resource can't hold the money. |
+| `StandaloneBank.enabled` | `true` | Backup account in the resource's own database table, used when your banking resource can't hold the money. |
 
 {% hint style="warning" %}
 If your banking resource is supported and working, set `StandaloneBank.enabled = false`. With both on, money can end up split between the two if your banking resource fails to start once.
@@ -253,7 +253,7 @@ The counter pays an item's price from `Marketplace.basePrices`, unless the owner
 
 ### Languages (`locales/`)
 
-9 languages ship: `en`, `de`, `fr`, `es`, `pt`, `ru`, `tr`, `zh`, `ar`. The shop uses the ox_lib language. Set it in `server.cfg`:
+9 languages ship: `en`, `de`, `fr`, `es`, `pt`, `ru`, `tr`, `zh`, `ar`. The resource uses the ox_lib language. Set it in `server.cfg`:
 
 ```cfg
 setr ox:locale en
@@ -263,7 +263,7 @@ To add a language, copy `locales/en.json` to `locales/<code>.json` and translate
 
 ### Resetting saved settings
 
-The shop saves some settings in the `aura_pawnshop_settings` table. To go back to the config values, delete the row and restart:
+The resource saves some settings in the `aura_pawnshop_settings` table. To go back to the config values, delete the row and restart:
 
 | Row (`k`) | What it holds |
 | --- | --- |

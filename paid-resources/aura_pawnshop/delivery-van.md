@@ -54,7 +54,7 @@ Remove `truckLook` (or at least `livery`) when you swap models, because other ve
 
 ### Keys and fuel
 
-When the van spawns, the shop gives the driver its keys and sets its fuel to `fuelLevel`. It works with the key and fuel resources listed in [Compatibility](./compatibility.md#other-resources). If your key resource is not listed, drivers may not be able to start the van: add it in `bridge/vehiclekey/client.lua`.
+When the van spawns, the resource gives the driver its keys and sets its fuel to `fuelLevel`. It works with the key and fuel resources listed in [Compatibility](./compatibility.md#other-resources). If your key resource is not listed, drivers may not be able to start the van: add it in `bridge/vehiclekey/client.lua`.
 
 ### What happens if the van is lost
 

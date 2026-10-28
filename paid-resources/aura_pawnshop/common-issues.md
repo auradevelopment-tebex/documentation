@@ -8,7 +8,7 @@ Fixes for the most common setup mistakes. Turn on `Debug = true` in `configs/sha
 
 ### `invalid item '...' — not in the items database, skipped` in console
 
-The item is missing from your inventory, so the shop skips it.
+The item is missing from your inventory's item list, so the resource skips it when it starts: the item is removed from the buy list, the marketplace price list and the walk-in lists until the next restart.
 
 Fix: add the items from [Framework Setup](./framework-setup.md) to your **inventory** (ox_inventory uses its own `data/items.lua`, even on ESX), restart the server, then check with `/pawnitems <item>`.
 
@@ -20,13 +20,13 @@ Fix: `ensure` your framework and inventory **before** `aura_pawnshop` in `server
 
 ### No target options in the shop
 
-The target resource or the framework starts after the shop, or you don't have the job.
+The target resource or the framework starts after `aura_pawnshop`, so the resource doesn't detect it, or you don't have the job.
 
 Fix: start `ox_target` / `qb-target` and your framework before `aura_pawnshop`. Check your job is exactly `pawn` (or your `JOB_NAME`). Managers-only points (terminal, manager storage) need grade `3` or up.
 
 ### Players are standing in an empty building / fall through the floor
 
-The rStudio Pawn Shop MLO is missing or starts after the shop.
+The [rStudio Pawn Shop MLO](https://rstudiomaps.tebex.io/package/6793070) is missing or not started.
 
 Fix: install the MLO and `ensure` it. If you moved the shop elsewhere, move every location in `configs/shared/main.lua` together: `Blip`, `Storage`, `Warehouse.entrance`, `Interactions`, `NPC`, `WalkUps` and `Delivery.pickup`.
 
@@ -44,7 +44,7 @@ Fix: a manager switches it back to NPC mode in the boss menu (**Settings**).
 
 ### `shop storage needs qb-inventory 2.x` in console
 
-You run qb-inventory 1.x. It has none of the stash functions the shop uses.
+You run qb-inventory 1.x. It has none of the stash functions the resource uses.
 
 Fix: update to qb-inventory 2.x, or use ox_inventory.
 
@@ -74,9 +74,9 @@ Fix: wait, lower the price, or buy the **Faster Buyers** upgrade. You can also l
 
 ### The delivery van doesn't spawn or is invisible
 
-The resource folder was renamed, or the van files were moved.
+The van files were moved out of the resource, or players haven't downloaded the model yet.
 
-Fix: keep the folder name `aura_pawnshop` with `stream/` and `data/aurapawnvan/` inside, then restart the server (not only the resource) so players download the model. To use a GTA van instead, see [Delivery Van](./delivery-van.md#using-a-different-vehicle).
+Fix: keep `stream/` and `data/aurapawnvan/` inside `aura_pawnshop`, then restart the server (not only the resource) so players download the model. To use a GTA van instead, see [Delivery Van](./delivery-van.md#using-a-different-vehicle).
 
 ### Drivers can't start the van
 

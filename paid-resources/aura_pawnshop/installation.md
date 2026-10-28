@@ -11,20 +11,20 @@ How to properly install aura_pawnshop. Takes about 15 minutes, most of it adding
 
 ### Check what you need first
 
-Install and start these **before** you add aura_pawnshop. The resource does not work without them.
+Install and start these **before** you add aura_pawnshop:
 
-| Requirement | Why it is needed |
-| --- | --- |
-| **rStudio Pawn Shop MLO** | The shop interior. All counters, stashes, the boss desk and the NPC are placed for this MLO. Without it players stand in an empty building. |
-| [**ox_lib**](https://github.com/overextended/ox_lib/releases/latest) | Menus, callbacks, progress bars, languages. |
-| [**oxmysql**](https://github.com/overextended/oxmysql/releases/latest) | Database. The shop creates its own tables on first start. |
-| **Framework:** `qbx_core`, `qb-core` or `es_extended` | Jobs, money and player data. |
-| **Inventory with stashes** | `ox_inventory` (recommended), `qb-inventory` 2.x, `qs-inventory`, `origen_inventory`, `tgiann-inventory`, `jpr-inventory`, `core_inventory`. See [Compatibility](./compatibility.md) for the limits of `ps-inventory` and `codem-inventory`. |
-| **Target:** `ox_target` or `qb-target` | Every interaction point in the shop. |
-| **Banking resource** | Holds the shop's money (society account). Optional: if you have none, the shop keeps its money in its own table. |
-| [**aura_dialog**](../../free-releases/aura_dialog/installation.md) (free) | Conversations with walk-in customers. Everything else works without it, but staff cannot talk to walk-ins. |
+* [**rStudio Pawn Shop MLO**](https://rstudiomaps.tebex.io/package/6793070)
+* [**ox_lib**](https://github.com/overextended/ox_lib/releases/latest)
+* [**oxmysql**](https://github.com/overextended/oxmysql/releases/latest)
+* **A framework:** `qbx_core`, `qb-core` or `es_extended`
+* **An inventory with stashes:** `ox_inventory` (recommended), `qb-inventory` 2.x, `qs-inventory`, `origen_inventory`, `tgiann-inventory`, `jpr-inventory` or `core_inventory` ([limits of the others](./compatibility.md#inventory))
+* **A target:** `ox_target` or `qb-target`
+* [**aura_dialog**](../../free-releases/aura_dialog/installation.md) (free)
 
-Optional: **MugShotBase64** shows a photo of regular customers on the tablet.
+Optional:
+
+* **A banking resource** from the [supported list](./compatibility.md#banking-shop-money). Without one, the resource keeps the shop's money in its own database table.
+* **MugShotBase64** for photos of regular customers on the tablet.
 
 {% hint style="info" %}
 Using the ESX built-in inventory? It has no stashes, so shop storage, counter sales and the warehouse do not work. Use `ox_inventory` with ESX.
@@ -42,7 +42,7 @@ resources/[aura]/aura_pawnshop
 ```
 
 {% hint style="danger" %}
-Keep the folder name `aura_pawnshop`. The interface, the item images and the vehicle files are loaded by that name.
+Keep the folder name `aura_pawnshop`. The resource is protected by CFX escrow, and escrowed resources can't be renamed: a renamed folder does not start.
 {% endhint %}
 
 The download contains:
@@ -59,12 +59,14 @@ The download contains:
 
 ### Add the job and items
 
-The shop needs a `pawn` job with grades `0` to `4`, and the 66 items it buys and sells must exist in your inventory.
+The resource needs a `pawn` job with grades `0` to `4`, and the 66 items the shop buys and sells must exist in your inventory.
 
 Follow [Framework Setup](./framework-setup.md). It has ready-to-paste blocks for QBCore/QBOX, ox_inventory and ESX.
 
 {% hint style="info" %}
-Items that are missing from your inventory are skipped when the shop starts. Nothing breaks, but those items cannot be sold to the shop or listed.
+About 3 seconds after the resource starts, it checks every item in its config against your inventory's item list. An item your inventory doesn't know is **skipped**: it is removed from the counter's buy list, the marketplace price list and the walk-in item lists until the next restart. The rest of the resource keeps working.
+
+Each skipped item prints a red line in the server console, for example `[pawnshop] invalid item 'rolex' in Marketplace.basePrices — not in the items database, skipped`. Check a single item at any time with `/pawnitems <item>` ([Commands](./commands.md#pawnitems)).
 {% endhint %}
 {% endstep %}
 
@@ -85,10 +87,10 @@ ensure aura_dialog
 ensure aura_pawnshop
 ```
 
-Replace `qbx_core` / `ox_inventory` / `ox_target` with what your server uses. The MLO can start anywhere before the shop.
+Replace `qbx_core` / `ox_inventory` / `ox_target` with what your server uses. The MLO can start anywhere before `aura_pawnshop`.
 
 {% hint style="info" %}
-The shop finds your framework, inventory, target and banking when it starts. If one of them starts later, the shop does not see it and interactions stay dead.
+When `aura_pawnshop` starts, the resource looks for your framework, inventory, target and banking resources. One that starts **after** it may not be detected, and the features that depend on it stay dead: no target options, no stashes, or money not reaching the society account. Fix the order and restart the server.
 {% endhint %}
 {% endstep %}
 
