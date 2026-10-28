@@ -40,7 +40,7 @@ local MAX_GRADE <const> = 4
 | Option | Default | Description |
 | --- | --- | --- |
 | `Debug` | `false` | Prints extra `[DEBUG]` lines in the F8 and server console. Turn it on when something doesn't work, off on a live server. |
-| `DevMode` | `true` | Enables the admin test command `pawn_warehouse_set`. Set it to `false` on a live server. |
+| `DevMode` | `false` | Enables the admin test command `pawn_warehouse_set`. Leave it `false` on a live server. |
 | `Sounds` | GTA sounds | Sound played for select, back, purchase, success, error and van arrival. Set one to `false` to mute it. |
 | `InventoryImages.baseUrl` | `'nui://ox_inventory/web/images/'` | Backup image folder, only used when the resource can't find an item's image in your inventory or in the images that ship with it. |
 

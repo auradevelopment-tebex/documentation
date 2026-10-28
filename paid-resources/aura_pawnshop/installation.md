@@ -98,7 +98,7 @@ When `aura_pawnshop` starts, the resource looks for your framework, inventory, t
 
 ### Check the config
 
-Open `configs/shared/main.lua` and set these two lines at the top for a live server:
+Open `configs/shared/main.lua`. The two lines at the top are already set for a live server, leave them like this:
 
 ```lua
 Debug = false,

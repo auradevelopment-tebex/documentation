@@ -35,7 +35,7 @@ Shows fake staff, charts and ledger in **your** boss menu only, for screenshots 
 Only exists when `DevMode = true` in `configs/shared/main.lua`. It changes the shop's real upgrade level and is logged in the transactions.
 
 {% hint style="danger" %}
-Set `DevMode = false` on a live server, so the command does not exist there.
+Leave `DevMode = false` (the default) on a live server, so the command does not exist there.
 {% endhint %}
 
 {% hint style="info" %}
