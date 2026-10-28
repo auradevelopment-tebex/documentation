@@ -17,6 +17,22 @@
     * [Tablet](paid-resources/aura_foodtruck/usage/tablet.md)
   * [FAQ](paid-resources/aura_foodtruck/faq.md)
   * [Common Issues](paid-resources/aura_foodtruck/common-issues.md)
+* [aura\_pawnshop](paid-resources/aura_pawnshop/README.md)
+  * [Installation](paid-resources/aura_pawnshop/installation.md)
+  * [Framework Setup](paid-resources/aura_pawnshop/framework-setup.md)
+  * [Compatibility](paid-resources/aura_pawnshop/compatibility.md)
+  * [Configuration](paid-resources/aura_pawnshop/configuration.md)
+  * [Delivery Van](paid-resources/aura_pawnshop/delivery-van.md)
+  * [Usage](paid-resources/aura_pawnshop/usage/README.md)
+    * [First Setup](paid-resources/aura_pawnshop/usage/first-setup.md)
+    * [Selling at the Counter](paid-resources/aura_pawnshop/usage/selling-at-the-counter.md)
+    * [Marketplace & Deliveries](paid-resources/aura_pawnshop/usage/marketplace-and-deliveries.md)
+    * [Walk-in Customers](paid-resources/aura_pawnshop/usage/walk-ins.md)
+    * [Boss Menu](paid-resources/aura_pawnshop/usage/boss-menu.md)
+    * [Warehouse](paid-resources/aura_pawnshop/usage/warehouse.md)
+  * [Commands](paid-resources/aura_pawnshop/commands.md)
+  * [FAQ](paid-resources/aura_pawnshop/faq.md)
+  * [Common Issues](paid-resources/aura_pawnshop/common-issues.md)
 
 ## Free Releases
 
