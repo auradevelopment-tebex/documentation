@@ -7,7 +7,6 @@ description: Staff and admin commands in aura_pawnshop.
 | Command | Who | What it does |
 | --- | --- | --- |
 | `/pawnsell` | Employees with `view_market`, in the shop | Opens or closes the door to [walk-in customers](./usage/walk-ins.md) |
-| `/pawnitems <item>` | Admins (`group.admin`) | Prints what the resource finds for an item: inventory, whether it exists, label and image path |
 | `/pawndemo` | Admins (`group.admin`) | Toggles fake demo data in your own boss menu. Nothing is saved |
 | `/pawn_warehouse_set <level>` | Admins (`group.admin`), only with `DevMode = true` | Sets the warehouse level (`0` to `5`) without paying, for testing |
 
@@ -18,20 +17,6 @@ description: Staff and admin commands in aura_pawnshop.
 ```
 
 Run it inside or near the shop. The command name can be changed with `WalkUps.command` in `configs/shared/main.lua`.
-
-### /pawnitems
-
-```
-/pawnitems rolex
-```
-
-Run it in game or in the server console, then read the **server** console:
-
-```
-[pawnshop] inventory=ox_inventory item=rolex exists=true label=Golden Watch image=nui://ox_inventory/web/images/rolex.png
-```
-
-`exists=false` means the item is missing from your inventory. Add it ([Framework Setup](./framework-setup.md)) and restart.
 
 ### /pawndemo
 

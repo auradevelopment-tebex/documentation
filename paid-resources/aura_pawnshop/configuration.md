@@ -42,7 +42,7 @@ local MAX_GRADE <const> = 4
 | `Debug` | `false` | Prints extra `[DEBUG]` lines in the F8 and server console. Turn it on when something doesn't work, off on a live server. |
 | `DevMode` | `true` | Enables the admin test command `pawn_warehouse_set`. Set it to `false` on a live server. |
 | `Sounds` | GTA sounds | Sound played for select, back, purchase, success, error and van arrival. Set one to `false` to mute it. |
-| `InventoryImages.baseUrl` | `'nui://ox_inventory/web/images/'` | Backup image folder, only used when the resource can't find an item's image in your inventory or in `_images/`. |
+| `InventoryImages.baseUrl` | `'nui://ox_inventory/web/images/'` | Backup image folder, only used when the resource can't find an item's image in your inventory or in the images that ship with it. |
 
 ### Map blip (`Blip`)
 
@@ -131,7 +131,7 @@ The other options (`valueDrift*`, `ask*`, `buyBudget*`, `*ChancePct`) tune the h
 
 | Option | Default | Description |
 | --- | --- | --- |
-| `truckModel` | `` `aurapawnvan` `` | Van model. See [Delivery Van](./delivery-van.md). |
+| `truckModel` | the included van | Vehicle used for deliveries. See [Delivery Van](./delivery-van.md). |
 | `truckLook` | livery `0`, dark paint | Livery and colours applied when the van spawns. Remove the block to keep the model's own look. |
 | `platePrefix` | `'PAWN'` | Plate text, 4 random digits are added. |
 | `fuelLevel` | `65.0` | Fuel the van starts with. |

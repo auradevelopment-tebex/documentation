@@ -747,5 +747,3 @@ Restart the server. Every missing item prints a red line in the server console:
 ```
 [pawnshop] invalid item 'rolex' in Marketplace.basePrices — not in the items database, skipped
 ```
-
-No red lines means every item was found. To check one item in game, run `/pawnitems rolex` as an admin and read the server console ([Commands](./commands.md)).

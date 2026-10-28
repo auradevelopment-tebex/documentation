@@ -10,7 +10,7 @@ Fixes for the most common setup mistakes. Turn on `Debug = true` in `configs/sha
 
 The item is missing from your inventory's item list, so the resource skips it when it starts: the item is removed from the buy list, the marketplace price list and the walk-in lists until the next restart.
 
-Fix: add the items from [Framework Setup](./framework-setup.md) to your **inventory** (ox_inventory uses its own `data/items.lua`, even on ESX), restart the server, then check with `/pawnitems <item>`.
+Fix: add the items from [Framework Setup](./framework-setup.md) to your **inventory** (ox_inventory uses its own `data/items.lua`, even on ESX), then restart the server. The red line is gone once the item is found.
 
 ### `item validation skipped: no item database found`
 
@@ -74,15 +74,15 @@ Fix: wait, lower the price, or buy the **Faster Buyers** upgrade. You can also l
 
 ### The delivery van doesn't spawn or is invisible
 
-The van files were moved out of the resource, or players haven't downloaded the model yet.
+The van files were removed from the resource, or players haven't downloaded the van yet.
 
-Fix: keep `stream/` and `data/aurapawnvan/` inside `aura_pawnshop`, then restart the server (not only the resource) so players download the model. To use a GTA van instead, see [Delivery Van](./delivery-van.md#using-a-different-vehicle).
+Fix: use the `aura_pawnshop` folder exactly as downloaded, then restart the server (not only the resource) so players download the van. To use a GTA van instead, see [Delivery Van](./delivery-van.md#using-a-different-vehicle).
 
 ### Drivers can't start the van
 
 Your vehicle key resource isn't detected.
 
-Fix: check the list in [Compatibility](./compatibility.md#other-resources). For another key resource, add it in `bridge/vehiclekey/client.lua`.
+Fix: check the list in [Compatibility](./compatibility.md#other-resources) and start your key resource before `aura_pawnshop`. With none of the listed key resources running, the van is left unlocked and drives without a key.
 
 ### "Society cannot cover the payout right now" at the drop-off
 

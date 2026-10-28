@@ -17,7 +17,7 @@ Install and start these **before** you add aura_pawnshop:
 * [**ox_lib**](https://github.com/overextended/ox_lib/releases/latest)
 * [**oxmysql**](https://github.com/overextended/oxmysql/releases/latest)
 * **A framework:** `qbx_core`, `qb-core` or `es_extended`
-* **An inventory with stashes:** `ox_inventory` (recommended), `qb-inventory` 2.x, `qs-inventory`, `origen_inventory`, `tgiann-inventory`, `jpr-inventory` or `core_inventory` ([limits of the others](./compatibility.md#inventory))
+* **An inventory with stashes:** `ox_inventory` (recommended), `qb-inventory` 2.x, `qs-inventory`, `origen_inventory`, `tgiann-inventory`, `jpr-inventory` or `core_inventory` ([full list](./compatibility.md#inventory))
 * **A target:** `ox_target` or `qb-target`
 * [**aura_dialog**](../../free-releases/aura_dialog/installation.md) (free)
 
@@ -48,9 +48,9 @@ Keep the folder name `aura_pawnshop`. The resource is protected by CFX escrow, a
 The download contains:
 
 * `configs/` the two config files you edit
-* `bridge/` framework, inventory and other integrations, editable
+* `bridge/` the framework, inventory and other integrations
 * `locales/` the translations
-* `stream/` and `data/aurapawnvan/` the delivery van, loaded automatically
+* the custom-made delivery van, loaded automatically
 * `_images/` an image for every shop item
 * `README.md` the full item and job lists, the same as [Framework Setup](./framework-setup.md)
 {% endstep %}
@@ -66,7 +66,7 @@ Follow [Framework Setup](./framework-setup.md). It has ready-to-paste blocks for
 {% hint style="info" %}
 About 3 seconds after the resource starts, it checks every item in its config against your inventory's item list. An item your inventory doesn't know is **skipped**: it is removed from the counter's buy list, the marketplace price list and the walk-in item lists until the next restart. The rest of the resource keeps working.
 
-Each skipped item prints a red line in the server console, for example `[pawnshop] invalid item 'rolex' in Marketplace.basePrices — not in the items database, skipped`. Check a single item at any time with `/pawnitems <item>` ([Commands](./commands.md#pawnitems)).
+Each skipped item prints a red line in the server console, for example `[pawnshop] invalid item 'rolex' in Marketplace.basePrices — not in the items database, skipped`.
 {% endhint %}
 {% endstep %}
 

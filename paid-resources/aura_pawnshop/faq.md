@@ -14,7 +14,7 @@ No. The resource creates its own database tables the first time it starts. You o
 
 ### Do I need aura_bridge?
 
-No. Framework, inventory, target, banking and the other integrations are in the resource's own `bridge/` folder.
+No. Everything aura_pawnshop needs to work with your framework, inventory, target and banking is built in.
 
 ### Is aura_dialog required?
 
@@ -45,7 +45,7 @@ Permissions, the buy list, shop mode, policies and upgrades are saved in the dat
 1. Add the item to your inventory and restart it.
 2. Give it a price in `Marketplace.basePrices` in `configs/server/main.lua`.
 3. Optional: add it to `Sell.buyList.items` with a category, and to `WalkUps.sellPool` / `buyPool` for walk-ins.
-4. Restart `aura_pawnshop`. Check it with `/pawnitems <item>`.
+4. Restart the server. If the item is still missing from your inventory, the console prints a red `invalid item` line for it.
 
 ### Can I use a different delivery vehicle?
 
