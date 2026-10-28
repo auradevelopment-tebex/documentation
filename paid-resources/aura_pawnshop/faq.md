@@ -34,7 +34,7 @@ No. Staff can't sell to their own shop. They list items on the marketplace inste
 
 ### How do I hire someone?
 
-The owner or a manager hires them at the **Management terminal** (**Employees** → **Hire**) while the player is in the shop. You don't need `/setjob` for staff.
+The owner or a manager hires them at the **Management terminal** (**Employees** → **Hire**) while the player is in the shop.
 
 ### I changed the config but nothing changed in game?
 
